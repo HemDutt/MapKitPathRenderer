@@ -1,0 +1,6 @@
+framework module MapKitPathRenderer {
+  umbrella header "MapKitPathRenderer-umbrella.h"
+
+  export *
+  module * { export * }
+}

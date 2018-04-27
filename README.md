@@ -1,6 +1,6 @@
 # MapKitPathRenderer
 
-[![CI Status](https://img.shields.io/travis/Hem Sharma/MapKitPathRenderer.svg?style=flat)](https://travis-ci.org/Hem Sharma/MapKitPathRenderer)
+[![CI Status](https://img.shields.io/travis/Hem Dutt/MapKitPathRenderer.svg?style=flat)](https://travis-ci.org/Hem Sharma/MapKitPathRenderer)
 [![Version](https://img.shields.io/cocoapods/v/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
 [![License](https://img.shields.io/cocoapods/l/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
 [![Platform](https://img.shields.io/cocoapods/p/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
@@ -22,7 +22,7 @@ pod 'MapKitPathRenderer'
 
 ## Author
 
-Hem Sharma, hem.sharma@nagarro.com
+Hem Dutt, hemdutt.developer@gmail.com
 
 ## License
 

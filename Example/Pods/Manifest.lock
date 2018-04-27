@@ -1,0 +1,16 @@
+PODS:
+  - MapKitPathRenderer (0.1.0)
+
+DEPENDENCIES:
+  - MapKitPathRenderer (from `../`)
+
+EXTERNAL SOURCES:
+  MapKitPathRenderer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MapKitPathRenderer: 7ecd1809c518e728a2be1a1472244dbaab853c9d
+
+PODFILE CHECKSUM: 63d6e08f0682747783e1150db8b597361d156401
+
+COCOAPODS: 1.4.0

@@ -41,11 +41,11 @@
 		607FACE51AFB9204008FA782 /* MapKitPathRenderer_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapKitPathRenderer_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		72F3F950F2E1A520AC937FDE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		72F3F950F2E1A520AC937FDE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		74C626AD7E44631E6D8ED185 /* Pods-MapKitPathRenderer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitPathRenderer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapKitPathRenderer_Example/Pods-MapKitPathRenderer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B06025B47C032DB38C26A09C /* Pods_MapKitPathRenderer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapKitPathRenderer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B53653F4E7349D6EAB57AB33 /* MapKitPathRenderer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MapKitPathRenderer.podspec; path = ../MapKitPathRenderer.podspec; sourceTree = "<group>"; };
-		CE5061C5D736EC1A0DDF461E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B53653F4E7349D6EAB57AB33 /* MapKitPathRenderer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MapKitPathRenderer.podspec; path = ../MapKitPathRenderer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE5061C5D736EC1A0DDF461E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E639E0D2C9CC9FAA3ACD8A8F /* Pods_MapKitPathRenderer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapKitPathRenderer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
