@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MapKitPathRenderer_Example' do
+  pod 'MapKitPathRenderer', :path => '../'
+
+  target 'MapKitPathRenderer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
