@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MapKitPathRenderer'
   s.version          = '0.1.0'
-  s.summary          = 'MapKitPathRenderer allows drawing straight line path between multiple points on MapKitView.'
+  s.summary          = 'MapKitPathRenderer returns multiple points on a straight line path between a source and destination on MapKit over which animation can rendered.'
   s.swift_version    = '4.1'
 
 # This description is used to generate tags and improve search results.
@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'MapKitPathRenderer allows drawing straight line path between multiple points on MapKitView.It allows multiple annotations on Map view to be connected through a straight line. MapKitPathRenderer considers date line crossing for creating shortest path between to coordinates.'
+'MapKitPathRenderer returns multiple points on a straight line path between a source and destination on MapKit over which animation can rendered. MapKitPathRenderer considers date line crossing for creating shortest path between two coordinates.'
                        DESC
 
-  s.homepage         = 'https://github.com/Hem Dutt/MapKitPathRenderer'
+  s.homepage         = 'https://github.com/HemDutt/MapKitPathRenderer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hem Dutt' => 'hemdutt.developer@gmail.com' }
