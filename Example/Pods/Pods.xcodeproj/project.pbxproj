@@ -17,8 +17,8 @@
 		57A5E1BF824E7969B0FFAABF44697D2E /* Pods-MapKitPathRenderer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC63EA8CFA6C4806CD7FD1C3D0E5848 /* Pods-MapKitPathRenderer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70EE6FCE4D45EC31898CB6A878FBFFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		EAD1D3F52092EED60092F8B5 /* MapKitPathRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1D3F42092EED60092F8B5 /* MapKitPathRenderer.swift */; };
-		EAD1D3F82092F1980092F8B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD1D3F72092F1980092F8B5 /* MapKit.framework */; };
 		EAD1D3FA209726620092F8B5 /* MKPRStraightLineRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1D3F9209726620092F8B5 /* MKPRStraightLineRoute.swift */; };
+		EAD1D3FF209871530092F8B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD1D3F72092F1980092F8B5 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD1D3F82092F1980092F8B5 /* MapKit.framework in Frameworks */,
+				EAD1D3FF209871530092F8B5 /* MapKit.framework in Frameworks */,
 				70EE6FCE4D45EC31898CB6A878FBFFB5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +191,8 @@
 		9ED39C6245CDB90C108A464F7EC45F51 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EAD1D3FE209853D70092F8B5 /* Classes */,
+				EAD1D3F42092EED60092F8B5 /* MapKitPathRenderer.swift */,
+				EAD1D3F9209726620092F8B5 /* MKPRStraightLineRoute.swift */,
 				3E72EC11D310CE5A2F86DE1E7FCEB996 /* LICENSE */,
 				A3D152AB5E2B2FC0E20F05B677E69407 /* MapKitPathRenderer.podspec */,
 				17DCEACC72FC2B6BB7D9BE21DAA9A48B /* README.md */,
@@ -224,15 +225,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		EAD1D3FE209853D70092F8B5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EAD1D3F42092EED60092F8B5 /* MapKitPathRenderer.swift */,
-				EAD1D3F9209726620092F8B5 /* MKPRStraightLineRoute.swift */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

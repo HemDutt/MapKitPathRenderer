@@ -3,6 +3,12 @@
 [![Version](https://img.shields.io/cocoapods/v/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
 [![License](https://img.shields.io/cocoapods/l/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
 [![Platform](https://img.shields.io/cocoapods/p/MapKitPathRenderer.svg?style=flat)](https://cocoapods.org/pods/MapKitPathRenderer)
+![Screenshot](demo.gif)
+
+## Features
+1. Return points on a Polyline over MapKit between 2 coordinates.
+
+2. Handles Date Line crossing to seamlessly allow animation between coordinates of different continents.
 
 ## Example
 
