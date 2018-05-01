@@ -191,8 +191,7 @@
 		9ED39C6245CDB90C108A464F7EC45F51 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EAD1D3F42092EED60092F8B5 /* MapKitPathRenderer.swift */,
-				EAD1D3F9209726620092F8B5 /* MKPRStraightLineRoute.swift */,
+				EAD1D3FE209853D70092F8B5 /* Classes */,
 				3E72EC11D310CE5A2F86DE1E7FCEB996 /* LICENSE */,
 				A3D152AB5E2B2FC0E20F05B677E69407 /* MapKitPathRenderer.podspec */,
 				17DCEACC72FC2B6BB7D9BE21DAA9A48B /* README.md */,
@@ -225,6 +224,15 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		EAD1D3FE209853D70092F8B5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EAD1D3F42092EED60092F8B5 /* MapKitPathRenderer.swift */,
+				EAD1D3F9209726620092F8B5 /* MKPRStraightLineRoute.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

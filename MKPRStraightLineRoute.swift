@@ -183,17 +183,17 @@ class MKPRStraightLineRoute: NSObject
         return arrCoordinates.count>0 ? arrCoordinates : nil
     }
     
-    func getRoutePathBetween(source : CLLocationCoordinate2D , destination : CLLocationCoordinate2D , steps : Int) -> MKPolyline?
+    func getRoutePathBetween(source : CLLocationCoordinate2D , destination : CLLocationCoordinate2D , steps : Int) -> (MKPolyline?, [CLLocationCoordinate2D]?)
     {
         //Return  straight line route between source, destination points
-        var routePath : MKPolyline? = nil
         if let pathCoord = self.getCoordinatesBetween(source: source, destination: destination , steps : steps)
         {
             //Set connection path
-            routePath = MKPolyline.init(coordinates: pathCoord, count: pathCoord.count)
+            let routePath = MKPolyline.init(coordinates: pathCoord, count: pathCoord.count)
+            return (routePath , pathCoord)
         }
         
-        return routePath
+        return (nil, nil)
     }
     
     func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] , steps : Int) -> [MKPolyline]

@@ -15,23 +15,22 @@ struct MapSourceDestinationStruct
 }
 
 //defaultStepCount is the count of points needed between source and destiation coordinates
-private let defaultStepCount = 20
+//let defaultStepCount = 20
 
 public class MapKitPathRenderer: NSObject
 {
-    func getRoutePathBetween(source : CLLocationCoordinate2D , destination : CLLocationCoordinate2D , straightLinePath : Bool = true ,steps : Int = defaultStepCount) -> MKPolyline?
+    public func getRoutePathBetween(source : CLLocationCoordinate2D , destination : CLLocationCoordinate2D , straightLinePath : Bool = true ,steps : Int = 20) -> (MKPolyline?, [CLLocationCoordinate2D]?)
     {
-        var routePath : MKPolyline? = nil
         if straightLinePath == true
         {
             //Return  straight line route between source, destination points
-            routePath = MKPRStraightLineRoute.init().getRoutePathBetween(source: source, destination: destination, steps: steps)
+            return MKPRStraightLineRoute.init().getRoutePathBetween(source: source, destination: destination, steps: steps)
         }
         
-        return routePath
+        return (nil , nil)
     }
     
-    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] ,straightLinePath : Bool = true, steps : Int = defaultStepCount) -> [MKPolyline]
+    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] ,straightLinePath : Bool = true, steps : Int = 20) -> [MKPolyline]
     {
         var routes : [MKPolyline] = Array<MKPolyline>.init()
         if straightLinePath == true
