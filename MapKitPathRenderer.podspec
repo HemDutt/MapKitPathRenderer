@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'MapKitPathRenderer returns multiple points on a straight line path between a source and destination on MapKit over which animation can rendered. MapKitPathRenderer considers date line crossing for creating shortest path between two coordinates.'
+'MapKitPathRenderer returns multiple points on a straight Polyline path between a source and destination on MapKit over which animation can rendered. MapKitPathRenderer considers Date Line crossing for creating shortest path between two coordinates for animation to be rendered.'
                        DESC
 
   s.homepage         = 'https://github.com/HemDutt/MapKitPathRenderer'
