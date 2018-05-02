@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MapKitPathRenderer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'MapKitPathRenderer returns points on a route between a source and destination on MapKit over which animation can rendered.'
   s.swift_version    = '4.1'
 

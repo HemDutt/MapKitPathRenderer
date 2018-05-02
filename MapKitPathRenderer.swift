@@ -30,9 +30,9 @@ public class MapKitPathRenderer: NSObject
         return (nil , nil)
     }
     
-    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] ,straightLinePath : Bool = true, steps : Int = 20) -> [MKPolyline]
+    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] ,straightLinePath : Bool = true, steps : Int = 20) -> [(MKPolyline?, [CLLocationCoordinate2D]?)]
     {
-        var routes : [MKPolyline] = Array<MKPolyline>.init()
+        var routes : [(MKPolyline?, [CLLocationCoordinate2D]?)] = []
         if straightLinePath == true
         {
             //Return multiple straight line routes for multiple source, destination points in sdArray

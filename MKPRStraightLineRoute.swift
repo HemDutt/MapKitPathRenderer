@@ -196,16 +196,16 @@ class MKPRStraightLineRoute: NSObject
         return (nil, nil)
     }
     
-    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] , steps : Int) -> [MKPolyline]
+    func getRoutesForSourceDestinatonStructArray(_ sdArray : [MapSourceDestinationStruct] , steps : Int) -> [(MKPolyline?, [CLLocationCoordinate2D]?)]
     {
         //Return multiple straight line routes for multiple source, destination points in sdArray
-        var routes : [MKPolyline] = Array<MKPolyline>.init()
+        var routes : [(MKPolyline?, [CLLocationCoordinate2D]?)] = []
         for coordinates in sdArray
         {
             if let source = coordinates.sourceCoordinate, let destination = coordinates.destinationCoordinate, let pathCoord = self.getCoordinatesBetween(source: source, destination: destination , steps: steps)
             {
                 let routePath = MKPolyline.init(coordinates: pathCoord, count: pathCoord.count)
-                routes.append(routePath)
+                routes.append((routePath, pathCoord))
             }
         }
         
