@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import MapKitPathRenderer
 import MapKit
+import MapKitPathRenderer
 
 //Model class
 class Artwork: NSObject, MKAnnotation
@@ -21,30 +21,45 @@ class Artwork: NSObject, MKAnnotation
     }
 }
 
-class ViewController: UIViewController
-{
-
+class ViewController: UIViewController {
+    
     @IBOutlet weak var mapView : MKMapView!
     var animation : MKPointAnnotation? = nil
-
+    
+    var source: CLLocationCoordinate2D?
+    var destination: CLLocationCoordinate2D?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         mapView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
-        // Add two annotations
-        let source = CLLocationCoordinate2D.init(latitude: 31.2304, longitude: 121.4737)
-        let destination = CLLocationCoordinate2D.init(latitude: 36.7783, longitude: -119.4179)
-
-        let annotation1 = Artwork.init(coordinate: source)
-        let annotation2 = Artwork.init(coordinate: destination)
         
-        mapView.addAnnotation(annotation1)
-        mapView.addAnnotation(annotation2)
-
+        self.getLocationFromAddress(address: "Jaipur") { (location) in
+            self.source = location
+            self.renderMap()
+        }
+        
+        self.getLocationFromAddress(address: "Taiwan") { (location) in
+            self.destination = location
+            self.renderMap()
+        }
+        
+    }
+    
+    func renderMap() {
+        guard let sourceLocation = self.source else { return }
+        guard let destinationLocation = self.destination else { return }
+        
+        let annotation1 = Artwork.init(coordinate: sourceLocation)
+        let annotation2 = Artwork.init(coordinate: destinationLocation)
+        
+        self.mapView.addAnnotation(annotation1)
+        self.mapView.addAnnotation(annotation2)
+        
         //Add straight line path between annotation
         let renderer = MapKitPathRenderer()
-        let routeObj = renderer.getRoutePathBetween(source: source , destination:destination)
+        let routeObj = renderer.getRoutePathBetween(source: sourceLocation , destination:destinationLocation)
         if let route = routeObj.0
         {
             self.mapView.addOverlays([route])
@@ -61,6 +76,7 @@ class ViewController: UIViewController
             self.startAnimationOn(coordinates: pathCoord)
         }
     }
+    
     
     @objc fileprivate func startAnimationOn(coordinates : [CLLocationCoordinate2D])
     {
@@ -93,7 +109,7 @@ class ViewController: UIViewController
     }
     
     private func animateOnCoordinates(array:[CLLocationCoordinate2D], index:Int=0,
-                                          completionHandler: @escaping()->Void)
+                                      completionHandler: @escaping()->Void)
     {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2, execute: { [weak self] in
             
@@ -189,6 +205,26 @@ extension ViewController : MKMapViewDelegate
         }
         
         return MKPolylineRenderer()
+    }
+    
+    func getLocationFromAddress(address : String, success: @escaping (CLLocationCoordinate2D?) -> Void) {
+        
+        let geocoder = CLGeocoder()
+        var geoLocation : CLLocationCoordinate2D?
+        
+        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                //Handle Errors
+                geoLocation = nil
+                
+            }
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                geoLocation = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+                success(geoLocation)
+            }
+        })
+        
     }
 }
 
